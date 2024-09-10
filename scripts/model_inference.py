@@ -6,9 +6,9 @@ import cv2
 import tensorflow as tf
 import segmentation_models as sm
 
-def get_model(input_shape, backbone, weights="imagenet"):
+def get_model(input_shape, backbone):
     model = sm.Unet(backbone, classes=2, activation='softmax', 
-                    input_shape=input_shape, encoder_weights=weights)
+                    input_shape=input_shape)
     return model
 
 def preprocess_image(image_path, target_size):

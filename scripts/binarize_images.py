@@ -6,8 +6,7 @@ def binarize_image(input_path, output_path):
     img = cv2.imread(input_path)
 
     # Calcula o Excess Green Index (ExG)
-    B, G, R = img[:, :, 0], img[:, :, 1], img[:, :, 2]
-    ExG = 2 * G - R - B
+    ExG = 2 * img[:, :, 1] - img[:, :, 2] - img[:, :, 0]
 
     # Aplica o método de Otsu para binarização
     _, binary = cv2.threshold(ExG, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
