@@ -1,0 +1,6 @@
+albumentations==1.4.14
+numpy==1.26.4
+opencv-python==4.10.0.84
+pillow==10.4.0
+segmentation-models @ git+https://github.com/qubvel/segmentation_models@5d24bbfb28af6134e25e2c0b79e7727f6c0491d0
+tensorflow==2.17.0
